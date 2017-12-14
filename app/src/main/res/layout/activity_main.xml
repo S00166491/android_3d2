@@ -10,99 +10,74 @@
 
     <VideoView
         android:id="@+id/videoView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="27dp"
-        android:layout_weight="85"
-        app:layout_constraintBottom_toTopOf="@+id/PlayButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/PrevButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/PrevButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
         android:text="Prev"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/NextButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PlayButton"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <Button
+        android:id="@+id/BackwardButton"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:text="Rew"
+        app:layout_constraintStart_toEndOf="@+id/PrevButton"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/PlayButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="3dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
         android:text="Play"
-        app:layout_constraintBottom_toTopOf="@+id/PrevButton"
-        app:layout_constraintEnd_toStartOf="@+id/PauseButton"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BackwardButton"
         app:layout_constraintTop_toBottomOf="@+id/videoView"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/PauseButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="13dp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
         android:text="Pause"
-        app:layout_constraintBottom_toBottomOf="@+id/PlayButton"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/PlayButton"
-        app:layout_constraintTop_toTopOf="@+id/PlayButton"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <Button
+        android:id="@+id/ForwardButton"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:text="Fwd"
+        app:layout_constraintStart_toEndOf="@+id/PauseButton"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/NextButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="13dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
         android:text="Next"
-        app:layout_constraintBottom_toBottomOf="@+id/PrevButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/PrevButton"
-        app:layout_constraintTop_toTopOf="@+id/PrevButton"
+        app:layout_constraintStart_toEndOf="@+id/ForwardButton"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/BackwardButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="125dp"
-        android:text="Backward"
-        app:layout_constraintBottom_toBottomOf="@+id/PrevButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/PrevButton"
-        app:layout_constraintTop_toTopOf="@+id/PrevButton"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/ForwardButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="125dp"
-        android:layout_marginEnd="125dp"
-        android:text="Forward"
-        app:layout_constraintBottom_toBottomOf="@+id/PrevButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/PrevButton"
-        app:layout_constraintTop_toTopOf="@+id/PrevButton"
-        tools:ignore="MissingConstraints" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </android.support.constraint.ConstraintLayout>
