@@ -144,6 +144,7 @@ public class bluetooth extends AppCompatActivity {
             }
         });
 
+
         // Button that enables bluetooth when clicked on
         Button mEnableButton = (Button) findViewById(R.id.activate_button);
         mEnableButton.setOnClickListener(new View.OnClickListener() {
