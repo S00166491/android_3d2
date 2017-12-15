@@ -49,7 +49,6 @@ import java.util.UUID
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 class bluetooth : AppCompatActivity() {
 
-    val UUID_Com = UUID.fromString("00001809-0000-1000-8000-00805f9b34fb")
     private var mBluetoothAdapter: BluetoothAdapter? = null
     private var mBluetoothLeScanner: BluetoothLeScanner? = null
 
@@ -74,8 +73,8 @@ class bluetooth : AppCompatActivity() {
     private val mHandler2 = Handler()
 
     private val myIntent: Intent? = null
-
-    internal var mUIrunnable: Runnable? = object : Runnable {
+    //internal
+    private var mUIrunnable: Runnable? = object : Runnable {
         override fun run() {
             mComValueTextView!!.text = value.toString()
             //            value += 1;
