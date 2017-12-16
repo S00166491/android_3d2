@@ -79,7 +79,13 @@ class bluetooth : AppCompatActivity() {
             mComValueTextView!!.text = value.toString()
             //            value += 1;
             //            mComValueTextView.setText(String.valueOf(value));
+            if (value === 1) {
 
+                val intent = Intent(applicationContext, MainActivity::class.java)
+                //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
+                startActivity(intent)
+                value = 0
+            }
             mHandler2.postDelayed(this, 1000)
         }
     }
@@ -456,7 +462,7 @@ class bluetooth : AppCompatActivity() {
 
         private val TAG = "ReadCharacteristic"
 
-        val UUID_COMMANDE = UUID.fromString("00001809-0000-1000-8000-00805f9b34fb")
+        val UUID_COMMANDE = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb")
 
         private val RQS_ENABLE_BLUETOOTH = 1
         private val SCAN_PERIOD: Long = 5000
