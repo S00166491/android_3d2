@@ -86,7 +86,8 @@ class bluetooth : AppCompatActivity() {
                 startActivity(intent)
                 value = 0
             }
-            mHandler2.postDelayed(this, 1000)
+
+           mHandler2.postDelayed(this, 1000)
         }
     }
 
@@ -189,17 +190,15 @@ class bluetooth : AppCompatActivity() {
 
             Log.e("Value = ", (Value!! + 5000).toString())
 
-            //            gatt.disconnect();
-
         }
 
         override fun onCharacteristicChanged(gatt: BluetoothGatt, characteristic: BluetoothGattCharacteristic) {
             super.onCharacteristicChanged(gatt, characteristic)
-            //            Integer Value = characteristic.getValue()[0] & 0xff;
-            value = characteristic.value[0].toInt() /*& 0xffff*/
+
+            value = characteristic.value[0].toInt()
             Log.e("Value = ", value.toString())
 
-            //            mPotarValueTextView.setText(String.valueOf(Value));
+
 
 
         }
