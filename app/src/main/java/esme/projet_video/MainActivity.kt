@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         setupMedia()
         setupListeners()
+
     }
 
     private fun setupMedia() {
@@ -95,8 +96,8 @@ class MainActivity : AppCompatActivity() {
 
         mForwardButton!!.setOnClickListener { forwardSong() }
 
-    }
 
+    }
 
     fun forwardSong() {
         if (mVideoView != null) {

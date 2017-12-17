@@ -53,6 +53,7 @@ class bluetooth : AppCompatActivity() {
     private var mBluetoothLeScanner: BluetoothLeScanner? = null
 
     private var mScanning: Boolean = false
+    private var mConnex :  Boolean = true
 
     private val mFragmentButton: Button? = null
     private var mScanButton: Button? = null
@@ -76,9 +77,11 @@ class bluetooth : AppCompatActivity() {
     //internal
     private var mUIrunnable: Runnable? = object : Runnable {
         override fun run() {
-            mComValueTextView!!.text = value.toString()
-            //            value += 1;
-            //            mComValueTextView.setText(String.valueOf(value));
+            if(mConnex==true) {
+                mComValueTextView!!.text = "connection ok"
+
+                //mComValueTextView!!.text =value.toString()
+            }
             if (value === 1) {
 
                 val intent = Intent(applicationContext, MainActivity::class.java)
@@ -97,8 +100,10 @@ class bluetooth : AppCompatActivity() {
         //                    final BluetoothDevice device = (BluetoothDevice) parent.getItemAtPosition(position);
         Log.e("onItemClick", "Position = " + position)
         val device = listBluetoothDevice!![position]
+        mConnex = true
         if (mGatt == null) {
             connectToDevice(device)
+
         }
 
         /*                    String msg = device.getAddress() + "\n"
@@ -277,6 +282,8 @@ class bluetooth : AppCompatActivity() {
         mDisconnectButton.setOnClickListener {
             if (mGatt != null) {
                 mGatt!!.disconnect()
+                mComValueTextView!!.text = "disconnection ok"
+                mConnex= false
             }
         }
 
