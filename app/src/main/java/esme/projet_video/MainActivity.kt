@@ -1,5 +1,10 @@
 package esme.projet_video
 
+/**
+ * Created by darrieu on 10/12/17.
+ */
+
+
 import android.R.raw
 import android.media.MediaPlayer
 import android.media.PlaybackParams

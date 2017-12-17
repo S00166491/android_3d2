@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/separator"
-            android:text="List of nearby devices"
+            android:text="List of devices"
             android:textSize="18dp"
             android:textStyle="bold" />
 
