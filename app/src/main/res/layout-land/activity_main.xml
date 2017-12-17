@@ -6,16 +6,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="100dp"
+    android:background="@android:color/background_dark">
 
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/PrevButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -23,7 +24,7 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:text="Prev"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
@@ -32,7 +33,6 @@
         android:layout_height="wrap_content"
         android:text="Rew"
         app:layout_constraintStart_toEndOf="@+id/PrevButton"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -42,7 +42,6 @@
         android:layout_height="wrap_content"
         android:text="Play"
         app:layout_constraintStart_toEndOf="@+id/BackwardButton"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -52,7 +51,6 @@
         android:layout_height="wrap_content"
         android:text="Pause"
         app:layout_constraintStart_toEndOf="@+id/PlayButton"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -64,7 +62,6 @@
         android:layout_height="wrap_content"
         android:text="Fwd"
         app:layout_constraintStart_toEndOf="@+id/PauseButton"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -74,7 +71,6 @@
         android:layout_height="wrap_content"
         android:text="Next"
         app:layout_constraintStart_toEndOf="@+id/ForwardButton"
-        app:layout_constraintTop_toBottomOf="@+id/videoView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
